@@ -1,0 +1,185 @@
+/* Header section*/
+@import "../abstract/variables";
+// .header {
+//     width: 100%;
+//     padding: 30px 0;
+  
+//     &__content {
+//       display: flex;
+//     //   justify-content: space-between;
+//       align-items: center;
+  
+  
+//       #check{
+//         display: none;
+//       }
+//       label{
+//         display: none;
+//         cursor: pointer;
+//         @media screen and (max-width:768px){
+//             display: block;
+//         }
+//       }
+  
+//       .close-icon {
+//         color: #fff;
+//         font-size: 25px;
+//       }
+//     }
+
+//     &__logo {
+//         font-weight: 400;
+//         font-size: 22px;
+//         color: $textYellow;
+//         padding-right: 40px;
+//     }
+
+//     .navigation {
+//         width: 100%;
+//         display: flex;
+//         justify-content: space-between;
+
+//         @media(max-width:768px){
+//                             transition: all .5s ease-in-out;
+//                             flex-direction: column;
+//                             justify-content: center;
+//                             align-items: center;
+//                             position: fixed;
+//                             top: 100px;
+//                             right: -100vw;
+//                             bottom: 0;
+//                             width: 100vw;
+//                             height: calc(100vh - 80px);
+//                             background-color: #F7F7F7;
+//                          }
+
+//         &__items {
+//            display: flex;
+//            gap:40px;
+//         }
+
+//         &__link {
+//              color: $textGray;
+//              font-weight: 400;
+//              font-size: 11px;
+//              line-height: 24px;
+//              text-transform: uppercase;
+//              &:hover{
+//                  color: $textYellow;
+//             }
+//         }
+
+//         .active {
+//             color: $textYellow;
+//         }
+
+//         &__btn {
+//             color:$textYellow;
+//             text-transform: uppercase;
+//         }
+  
+//     }
+
+//             #check:checked + .navigation{
+//             right: 0;
+//         }
+// }    
+
+.header{
+    width: 100%;
+
+    &__content{
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+
+        #check{
+            display: none;
+        }
+
+        label{
+            display: none;
+            cursor: pointer;
+            color: #fff;
+
+            @media(max-width:768px){
+                display: block;
+                position: absolute;
+                right: 5%;
+            }
+        }
+
+    
+
+        .navigation{
+            display: flex;
+            padding-top: 5px;
+            gap: 40px;
+
+            @media(max-width:768px){
+                transition: all .5s ease-in-out;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 80px;
+                right: -100vw;
+                bottom: 0;
+                width: 100vw;
+                height: calc(100vh - 80px);
+                background-color: $bg-color;
+            }
+        }
+
+        #check:checked ~ .navigation{
+            right: 0;
+        }
+
+        .navigation li a{
+            color: $textGray;
+            font-weight: 400;
+            font-size: 11px;
+            // line-height: 24px;
+            text-transform: uppercase;
+
+            @media screen and (max-width:768px) {
+                font-size: 20px;
+                line-height: 18px;
+            }
+            &:hover{
+                color: $textYellow;
+            }
+        }
+    }
+
+    &__brand {
+        vertical-align: middle;
+    }
+
+    &__logo {
+        font-weight: 400;
+        font-size: 30px;
+        color: $textYellow;
+        padding-right: 40px;
+    }
+
+    &__navs {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btns {
+        position: absolute;
+        right: 5%;
+        @media screen and (max-width:768px) {
+            display: none;
+        }
+        
+       a {
+        color: $textYellow;
+       }
+       
+    }
+}

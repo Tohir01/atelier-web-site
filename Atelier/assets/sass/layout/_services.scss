@@ -1,0 +1,61 @@
+@import "../abstract/variables";
+.services {
+  width: 100%;
+  padding: 120px 0;
+
+  &__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   
+    @media  screen and (max-width:400px) {
+        grid-template-columns: repeat(1,1fr);
+      }
+
+      @media  screen and (max-width:768px) {
+        grid-gap: 10px;
+      }
+  }
+
+  &__card {
+    border: 1px solid #4B4136;
+    padding:3.75rem 1rem 4.6rem 3.75rem;
+    flex: 1;
+
+    @media  screen and (max-width:576px) {
+      padding:2rem 1rem 4.6rem 2rem;
+    }
+
+    &-2 {
+      margin-top: 3px;
+    }
+
+    &-3 {
+      margin-top: 10px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 40px;
+    color: $textYellow;
+    padding-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: $textGray;
+  }
+
+  &__desc {
+    width: 222px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 26px;
+    color: $textGray;
+  }
+}
